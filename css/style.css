@@ -5,10 +5,22 @@ body {
 }
 
 header {
+  display: flex;               /* Flexbox aktiviert */
+  align-items: center;         /* Vertikal ausrichten */
+  justify-content: space-between; /* H1 links, Logo rechts */
   background-color: #004080;
   color: white;
-  padding: 15px;
-  text-align: center;
+  padding: 10px 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8em;
+}
+
+header .header-logo {
+  height: 50px;   /* optional: hier nochmal fixieren */
+  width: auto;
 }
 
 nav {
