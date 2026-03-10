@@ -26,38 +26,11 @@
 <main>
   <section>
     <h2>Willkommen</h2>
-    <p>Hier findest du alle Infos zum Bayern Cup 2026.</p>
-    <embed 
-      src="PlakatBayerncup.pdf" 
-      type="application/pdf" 
-      width="100%" 
-      height="800px" 
-      style="border: none;">
-  </embed>
+    <p>Hier findet ihr alle Infos zum Bayern Cup 2026.</p>
+    <p>Cool, dass ihr alle den Teils weiten Weg auf euch genommen habt!</p>
+    <img src="PlakatBayerncup.pdf" alt="Bayernkarte">
   </section>
-
-  <section>
-  <h2>Regelwerk (PDF inline)</h2>
-  <canvas id="pdf-canvas"></canvas>
-</section>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.14.305/pdf.min.js"></script>
-<script>
-const url = 'PlakatBayerncup.pdf';
-
-const loadingTask = pdfjsLib.getDocument(url);
-loadingTask.promise.then(pdf => {
-  pdf.getPage(1).then(page => {
-    const scale = 1.5;
-    const viewport = page.getViewport({ scale: scale });
-    const canvas = document.getElementById('pdf-canvas');
-    const context = canvas.getContext('2d');
-    canvas.height = viewport.height;
-    canvas.width = viewport.width;
-    page.render({ canvasContext: context, viewport: viewport });
-  });
-});
-</script>
+  
 </main>
 </body>
 </html>
